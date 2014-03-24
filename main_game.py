@@ -16,5 +16,5 @@ if __name__ == "__main__":
 		ev = pygame.event.poll()
 
 		#CODE...
-		pygame.display.flip()
+	wq	pygame.display.flip()
 		
