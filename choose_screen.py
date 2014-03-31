@@ -1,4 +1,4 @@
-import pygame, label, buttons
+import pygame, label, buttons, img
 def clear(color):
 	button_rec = pygame.Rect(0,0,500,500)
 	button_sq = pygame.Surface([500, 500])
@@ -8,16 +8,40 @@ if __name__ == "__main__":
 	pygame.init()
 	choose_screen = pygame.display.set_mode((500,500))
 	choose_screen.fill((255,255,255))
-	eyes = buttons.button((200,100),(20,20),(255,0,0))
+	'''eyes = buttons.button((200,100),(20,20),(255,0,0))
 	eyes.draw(choose_screen)
-	eyesl = label.Label(((200,100),(20,20),(0,0,0),	
 	noses = buttons.button((200,100),(20,130),(0,0,0))
 	noses.draw(choose_screen)
 	mouths = buttons.button((200,100),(230,20),(0,255,0))
 	mouths.draw(choose_screen)
 	hair = buttons.button((200,100),(230,130),(0,0,255))
+	hair.draw(choose_screen)'''
+	face = img.img((300,400),(100,60),"face.png")
+	face.draw(choose_screen)
+	hair = img.img((200,100),(153,60),"hair2boy.jpeg")
 	hair.draw(choose_screen)
-	
+	mouth = img.img((100,80),(200,300),"mouth.jpeg")
+	mouth.draw(choose_screen)
+	nose = img.img((60,50),(220,220),"nose1.jpeg")
+	nose.draw(choose_screen)
+	eyes = img.img((150,50),(180,120),"images.jpeg")
+	eyes.draw(choose_screen)
+	next = img.img((50,50),(420,120),"next.png")
+	next.draw(choose_screen)
+	pre = img.img((50,50),(40,120),"pre.png")
+	pre.draw(choose_screen)
+	next = img.img((50,50),(420,220),"next.png")
+	next.draw(choose_screen)
+	pre = img.img((50,50),(40,220),"pre.png")
+	pre.draw(choose_screen)
+	next = img.img((50,50),(420,320),"next.png")
+	next.draw(choose_screen)
+	pre = img.img((50,50),(40,320),"pre.png")
+	pre.draw(choose_screen)
+	next = img.img((50,50),(420,70),"next.png")
+	next.draw(choose_screen)
+	pre = img.img((50,50),(40,70),"pre.png")
+	pre.draw(choose_screen)
 	while True:
 		ev = pygame.event.poll()
 
