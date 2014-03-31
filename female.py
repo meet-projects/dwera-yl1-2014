@@ -1,5 +1,5 @@
 import img
-class male(object):
+class female(object):
 	def __init__(self):
 		self.hair = 0
 		self.eye = 0
@@ -7,7 +7,7 @@ class male(object):
 		self.mouth = 0
 		self.eyes_list = ["images.jpeg", "eyes1.jpeg", "eyes2.jpeg", "eyes.jpeg"]
 		self.nose_list = ["nose1.jpeg", "nose.jpeg", "nose2.jpeg"]
-		self.mouth_list = ["mouth.jpeg", "mouth9.jpeg", "mouth2.jpeg", "mouth4.jpeg"]
+		self.mouth_list = ["mouth.jpeg", "mouth9.jpeg", "mouth2.jpeg", "mouth6.jpeg"]
 		self.hair_list = ["hair2boy.jpeg", "hairboys.jpeg"]
 	def draw(self, choose_screen):
 		self.pic_face = img.img((300,400),(100,60),"face.png")
