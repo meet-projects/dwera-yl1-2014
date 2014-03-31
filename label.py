@@ -10,5 +10,5 @@ class Label(object):
 	def draw(self, main_screen):
 		label_rec = pygame.Rect(self.p[0], self.p[1], self.s[0], self.s[1])
 		orderlabel = pygame.font.Font(None, self.fs)
-		orderlabel = orderlabel.render(self.t , 1, self.c)
+		orderlabel = orderlabel.render(self.t, 1, self.c)
 		main_screen.blit(orderlabel, label_rec)	
