@@ -30,7 +30,9 @@ if __name__ == "__main__":
 		if ev.type == pygame.MOUSEBUTTONDOWN:
 			x, y = ev.pos	
 			if c.rec.collidepoint(x,y):
-				clear((255,0,0))		
+				clear((255,255,255))	
+			if a.rec.collidepoint(x,y):
+				clear((255,255,255))	
 		pygame.display.flip()
 
 
