@@ -1,6 +1,6 @@
 import pygame, label, buttons, choose_screen
 import sys 
-def clear(color):
+def clear(color, main_screen):
 	button_rec = pygame.Rect(0,0,500,500)
 	button_sq = pygame.Surface([500, 500])
 	button_sq.fill(color)
@@ -23,10 +23,10 @@ def run(main_screen):
 		if ev.type == pygame.MOUSEBUTTONDOWN:
 			x, y = ev.pos	
 			if c.rec.collidepoint(x,y):
-				clear((255,255,255))
+				clear((255,255,255),main_screen)
 				choose_screen.run(main_screen, True)
 			if a.rec.collidepoint(x,y):
-				clear((255,255,255))	
+				clear((255,255,255),main_screen)	
 				choose_screen.run(main_screen, False)
 		pygame.display.flip()
 
