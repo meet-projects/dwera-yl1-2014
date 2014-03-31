@@ -13,12 +13,7 @@ if __name__ == "__main__":
 	main_screen.fill((255,255,255))
 	a = buttons.button((110,60),(360,255),(255,151,153))
 	a.draw(main_screen)
-<<<<<<< HEAD
-	
 
-	
-=======
->>>>>>> 370acca7f811c98797131d4d8aa90bd0056a465b
 	b = label.Label((370,270) , (75,30) , (232,32,61) , "None", 40, "Female")
 	b.draw(main_screen)
 	c = buttons.button((110,60),(70,255),(255,151,153))
@@ -28,16 +23,6 @@ if __name__ == "__main__":
 	e = label.Label((180,150) , (60,60) , (232,14,33) , "None", 50, "Welcome !")
 	e.draw(main_screen)
 
-<<<<<<< HEAD
-	while True:
-		ev = pygame.event.poll()
-
-		#CODE...
-		pygame.display.flip()
-
-		pygame.display.flip()
-		
-=======
 
 	while True:
 		ev = pygame.event.poll()
@@ -51,6 +36,3 @@ if __name__ == "__main__":
 				clear((255,255,255))	
 		pygame.display.flip()
 
-
-
->>>>>>> 370acca7f811c98797131d4d8aa90bd0056a465b
