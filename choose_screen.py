@@ -1,4 +1,4 @@
-import pygame, label, buttons, img, male, main_game, female
+import pygame, label, buttons, img, male, main_game, female, game
 def clear(color, main_screen):
 	button_rec = pygame.Rect(0,0,500,500)
 	button_sq = pygame.Surface([500, 500])
@@ -28,6 +28,11 @@ def run(choose_screen, boolean):
 		f.draw(choose_screen)
 		g = label.Label((333,440),(70,70),(232,23,61), "None" , 45, "Play Again")
 		g.draw(choose_screen)
+
+		f2 = buttons.button((170,65),(0,435),(255,151,153))
+		f2.draw(choose_screen)
+		g2 = label.Label((10,440),(70,70),(232,23,61), "None" , 45, "Play game")
+		g2.draw(choose_screen)
 		pygame.display.flip()
 	else:
 		man = female.female()
@@ -63,6 +68,9 @@ def run(choose_screen, boolean):
 			if f.rec.collidepoint(x,y):
 				clear((255,255,255), choose_screen)
 				main_game.run(choose_screen)
+			if f2.rec.collidepoint(x,y):
+				clear((255,255,255), choose_screen)
+				game.run(choose_screen, man)
 			if next1.pic.collidepoint(x,y):
 				man.change_hair(1)
 				man.draw(choose_screen)
