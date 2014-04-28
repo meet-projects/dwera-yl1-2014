@@ -57,6 +57,10 @@ def run(choose_screen, boolean):
 		f.draw(choose_screen)
 		g = label.Label((333,440),(70,70),(232,23,61), "None" , 45, "Play Again")
 		g.draw(choose_screen)
+		f2 = buttons.button((170,65),(0,435),(255,151,153))
+		f2.draw(choose_screen)
+		g2 = label.Label((10,440),(70,70),(232,23,61), "None" , 45, "Play game")
+		g2.draw(choose_screen)
 		pygame.display.flip()
 	while True:
 		ev = pygame.event.poll()
