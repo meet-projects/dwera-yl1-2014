@@ -1,0 +1,13 @@
+Michele's group project feedback
+---
+
+Good job finishing the project and going above and beyond. Your game is really interestingI have a few specific comments about your project: 
+
+* Good job naming your main file `main_game.py` - it is very clear which file I need to open when I first open the project. 
+* Many of your methods involving clearing the screen take in a color to change the screen. For now, you are manually passing (255, 255, 255) to the function every time. What you can do instead is to have a variable that stores the color (`color = (255, 255, 255)`), and pass the variable `color` instead of manually.
+* In your `main_game.py` file, you have a bunch of functions to break up the work into pieces - this is exactly what you should do. However, the thing that you should do in the `if __name__=="__main__"` section of your main program is to make all the variables, buttons, images, inside this if statement. The _drawing_ can happen in functions that are called from the main function, but the objects should actually be created inside main. 
+* In many of the files you have the same `clear` function. What you can do instead of copy-pasting code is to write the function in one of the files, and import it into the other files. For example, if the function were written in the `choose_screen` file, then in your `main_game.py` file you `import choose_screen` and when you want to use `clear`, do `choose_screen.clear()`. 
+* It would be nice to have your pygame window close when I click the "x" at the top. There is an example for this in my code that I posted on the student website, using the Python `sys` module. You do this in your `main_game.py` file, but it does not work properly. This because you have multiple `while` loops. In the way you have written it, there are two solutions: (1) inside all the other `while` loops also include the `sys.exit()` code, or (2) `break` the outer loop when you start the inner loop. 
+* Your `male` and `female` classes are very very similar - you could have saved yourself the trouble of writing two separate classes by having one class called for example `character`, and you pass lists of the file names as parameters to that class. 
+* Your `Label` and `button` classes are very similar - your `button` class could be a subclass of `Label`, and it would have saved you some code. 
+* Good job implementing the arrow key listener for the game! Very fun to play.
